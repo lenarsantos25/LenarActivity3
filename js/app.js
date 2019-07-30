@@ -29,6 +29,7 @@ $(function(){
   
     jokeResetButton.on('click', function(){
       removeAllJoke();
+      jokeResetButton.hide();
     });
     
     async function makeJoke(){
@@ -54,7 +55,7 @@ $(function(){
 
       } catch(err){
         alert(err);
-        jokeButtonDisabled(true);
+        jokeButtonDisabled(false);
       }
     }
 
